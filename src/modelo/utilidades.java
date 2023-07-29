@@ -4,7 +4,9 @@
  */
 package modelo;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -36,5 +38,16 @@ public class utilidades {
         }
         return t;
     }
+//    public static LinkedList<Cliente> guardarArchivo(){
+//        String nombreArchivo = "ruta/del/archivo.txt";
+//        
+//        try{
+//            FileReader fileReader = new FileReader(nombreArchivo);
+//            BufferedReader bufferReader = new BufferedReader(fileReader);
+//            
+//            String Linea;
+//            while
+//        }
+//    }
     
 }

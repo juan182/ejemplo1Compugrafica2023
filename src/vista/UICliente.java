@@ -239,9 +239,9 @@ public class UICliente extends javax.swing.JFrame {
         
         boolean t = utilidades.guardarArchivo(listaClientes);
         if (t){
-            JOptionPane.showInputDialog("No se creo el archivo");
+            JOptionPane.showMessageDialog(null,"No se creo el archivo");
         }else{
-            JOptionPane.showInputDialog(Mostrar);
+            JOptionPane.showMessageDialog(null,"No se creo el archivo");
         }
         
         //guardarArchivo(listaClientes);
