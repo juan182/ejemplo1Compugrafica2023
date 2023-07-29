@@ -13,6 +13,7 @@ import java.io.ObjectOutputStream;
 import java.util.LinkedList;
 import javax.swing.JOptionPane;
 import modelo.Cliente;
+import modelo.utilidades;
 
 /**
  *
@@ -21,7 +22,7 @@ import modelo.Cliente;
 public class UICliente extends javax.swing.JFrame {
 
     /**
-     * Creates new form UICliente
+     * Creates new form UICliente 
      */
     LinkedList<Cliente> listaClientes;
     
@@ -31,18 +32,18 @@ public class UICliente extends javax.swing.JFrame {
         initComponents();
     }
     
-    public void guardarArchivo(LinkedList<Cliente> listaClientes){
-        String nombreArchivo = "Clientes.txt";
-        LinkedList<Cliente> elCL = new LinkedList();
-        ObjectOutputStream salida = null;
-        try{
-            salida = new ObjectOutputStream(
-                    new FileOutputStream(nombreArchivo));
-            salida.writeObject(elCL);
-        }catch(Exception e){
-            JOptionPane.showConfirmDialog(null, "Error recuperando" + e.getMessage() + "__" + e.toString());
-        }
-    }
+//    public void guardarArchivo(LinkedList<Cliente> listaClientes){
+//        String nombreArchivo = "Clientes.txt";
+//        LinkedList<Cliente> elCL = new LinkedList();
+//        ObjectOutputStream salida = null;
+//        try{
+//            salida = new ObjectOutputStream(
+//                    new FileOutputStream(nombreArchivo));
+//            salida.writeObject(elCL);
+//        }catch(Exception e){
+//            JOptionPane.showConfirmDialog(null, "Error recuperando" + e.getMessage() + "__" + e.toString());
+//        }
+//    }
     
      //public void recuperarArchivo(LinkedList<Cliente> listaClientes){
         //String nombreArchivo = "Clientes.txt";
@@ -235,7 +236,15 @@ public class UICliente extends javax.swing.JFrame {
     }//GEN-LAST:event_CancelarActionPerformed
 
     private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
-        guardarArchivo(listaClientes);
+        
+        boolean t = utilidades.guardarArchivo(listaClientes);
+        if (t){
+            JOptionPane.showInputDialog("No se creo el archivo");
+        }else{
+            JOptionPane.showInputDialog(Mostrar);
+        }
+        
+        //guardarArchivo(listaClientes);
     }//GEN-LAST:event_GuardarActionPerformed
 
     /**
