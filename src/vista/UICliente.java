@@ -99,7 +99,7 @@ public class UICliente extends javax.swing.JFrame {
         AddFirst = new javax.swing.JMenuItem();
         AddLast = new javax.swing.JMenuItem();
         Index = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        Remove = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
 
@@ -165,7 +165,7 @@ public class UICliente extends javax.swing.JFrame {
 
         jMenu3.setText("File");
 
-        AddFirst.setText("jMenuItem1");
+        AddFirst.setText("Add first");
         AddFirst.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AddFirstActionPerformed(evt);
@@ -173,7 +173,7 @@ public class UICliente extends javax.swing.JFrame {
         });
         jMenu3.add(AddFirst);
 
-        AddLast.setText("jMenuItem2");
+        AddLast.setText("Add last");
         AddLast.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AddLastActionPerformed(evt);
@@ -181,7 +181,7 @@ public class UICliente extends javax.swing.JFrame {
         });
         jMenu3.add(AddLast);
 
-        Index.setText("jMenuItem3");
+        Index.setText("index");
         Index.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IndexActionPerformed(evt);
@@ -189,13 +189,13 @@ public class UICliente extends javax.swing.JFrame {
         });
         jMenu3.add(Index);
 
-        jMenuItem4.setText("jMenuItem4");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        Remove.setText("Remove");
+        Remove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                RemoveActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem4);
+        jMenu3.add(Remove);
 
         jMenuItem5.setText("Clear");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
@@ -360,10 +360,10 @@ public class UICliente extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_IndexActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveActionPerformed
         // TODO add your handling code here:
         listaClientes.removeFirst();
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_RemoveActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
@@ -413,6 +413,7 @@ public class UICliente extends javax.swing.JFrame {
     private javax.swing.JButton Guardar;
     private javax.swing.JMenuItem Index;
     private javax.swing.JButton Mostrar;
+    private javax.swing.JMenuItem Remove;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
@@ -420,7 +421,6 @@ public class UICliente extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
